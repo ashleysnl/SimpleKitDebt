@@ -148,6 +148,12 @@ function renderDebtRows() {
           <div class="debt-row-title-wrap">
             <span class="debt-row-index" data-role="debt-heading">Debt ${index + 1} - ${escapeHtml(debt.name || "Unnamed")}</span>
           </div>
+
+        </div>
+        <span class="debt-row-meta" data-role="debt-meta">${buildDebtMeta(debt)}</span>
+      </summary>
+
+      <div class="debt-row-body">
           <div class="debt-row-summary-actions">
             <button
               class="btn btn-icon"
@@ -159,11 +165,6 @@ function renderDebtRows() {
               Delete
             </button>
           </div>
-        </div>
-        <span class="debt-row-meta" data-role="debt-meta">${buildDebtMeta(debt)}</span>
-      </summary>
-
-      <div class="debt-row-body">
         <div class="debt-row-grid">
           <label class="form-field debt-name-field">
             <span>Debt Label</span>
