@@ -1,0 +1,35 @@
+/* Editable debt rows, strategy selection, payoff schedule and chart keep their existing controls and ordering. */
+.sk-v2[data-v2-calculator="debt-payoff-calculator"] {
+  --debt-accent:var(--v2-teal);
+  --debt-brand:var(--v2-blue);
+  --debt-brand-2:var(--v2-teal);
+  --debt-brand-deep:var(--v2-navy);
+  --debt-danger:var(--v2-error);
+  --debt-ink:var(--v2-navy);
+  --debt-line:var(--v2-border);
+  --debt-line-strong:var(--v2-control-border);
+  --debt-muted:var(--v2-slate);
+  --debt-radius:var(--v2-radius-card);
+  --debt-shadow:var(--v2-shadow-soft);
+  --debt-success:var(--v2-success);
+  --debt-surface:var(--v2-surface);
+  --debt-surface-accent:var(--v2-tint);
+  --debt-surface-soft:var(--v2-surface);
+  --debt-warning:var(--v2-warning);
+}
+.sk-v2[data-v2-calculator="debt-payoff-calculator"] .v2c-main { row-gap:1.25rem; }
+.sk-v2[data-v2-calculator="debt-payoff-calculator"] .calculator-layout { gap:1.25rem; }
+.sk-v2[data-v2-calculator="debt-payoff-calculator"] .result-grid,.sk-v2[data-v2-calculator="debt-payoff-calculator"] .comparison-grid { gap:.75rem; }
+.sk-v2[data-v2-calculator="debt-payoff-calculator"] .debt-table-wrap { border:1px solid var(--v2-border); }
+.sk-v2[data-v2-calculator="debt-payoff-calculator"] .debt-table-wrap input { min-width:6rem; }
+@media(min-width:64rem) {
+ .sk-v2[data-v2-calculator="debt-payoff-calculator"] .calculator-layout { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(18rem,.85fr); align-items:start; }
+}
+@media(max-width:63.99rem) {
+ .sk-v2[data-v2-calculator="debt-payoff-calculator"] .calculator-layout { grid-template-columns:minmax(0,1fr); }
+ .sk-v2[data-v2-calculator="debt-payoff-calculator"] .summary-card-sticky { position:static; }
+}
+@media(max-width:47.99rem) {
+ .sk-v2[data-v2-calculator="debt-payoff-calculator"] :where(.form-grid,.field-grid,.advanced-grid,.input-grid,.salary-grid,.calculator-grid,.group-grid,.hero-grid,.settings-inline-grid) { grid-template-columns:minmax(0,1fr); }
+ .sk-v2[data-v2-calculator="debt-payoff-calculator"] :where(.form-actions,.toolbar-actions,.action-group,.wizard-actions,.backup-actions) { flex-wrap:wrap; }
+}

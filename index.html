@@ -112,13 +112,23 @@
       supportSecondaryLabel: "Explore more tools"
     };
   </script>
+
+  <!-- Shared V2 components, bundled locally by the portable site build. -->
+  <link rel="stylesheet" href="https://core.simplekit.app/v2/foundations.css">
+  <link rel="stylesheet" href="https://core.simplekit.app/v2/system.css">
+  <link rel="stylesheet" href="https://core.simplekit.app/v2/calculators.css">
+  <link rel="stylesheet" href="./v2-calculator.css">
+  <script defer src="https://core.simplekit.app/v2/shell.js"></script>
 </head>
-<body>
-  <a class="skip-link" href="#mainContent">Skip to content</a>
+<body class="sk-v2" data-v2-system="1" data-v2-calculator="debt-payoff-calculator" data-v2-family="housing-debt">
+<a class="v2s-skip v2-button" href="#mainContent">Skip to content</a>
+<header class="v2s-header"><div class="v2s-wrap v2s-header-inner"><a class="v2s-brand" href="/" aria-label="SimpleKit home"><svg aria-hidden="true" focusable="false"><use href="https://core.simplekit.app/v2/icons/sprite.svg#calculator"></use></svg>SimpleKit</a><button type="button" class="v2s-menu" data-v2s-menu aria-controls="v2-debt-payoff-calculator-nav" aria-expanded="false" hidden>Menu</button><nav class="v2s-nav" id="v2-debt-payoff-calculator-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/tools/" aria-current="page">Tools</a><a href="/learn/">Learn</a><a href="/about/">About</a><a href="/support/">Support</a></nav></div></header>
+
+  
 
   <div class="page-shell debt-shell">
-    <header class="hero hero-debt" aria-labelledby="pageTitle">
-      <div data-simplekit-header></div>
+    <header class="hero hero-debt v2c-hero" aria-labelledby="pageTitle">
+      
 
       <div class="hero-copy">
         <p class="eyebrow">SimpleKit Debt Tools</p>
@@ -154,8 +164,8 @@
       <a href="#faqHeading">FAQ</a>
     </section>
 
-    <main id="mainContent" class="page-flow">
-      <section class="intro-panel panel" aria-labelledby="introHeading">
+    <main id="mainContent" class="page-flow v2c-main" tabindex="-1">
+      <section class="intro-panel panel v2c-surface" aria-labelledby="introHeading">
         <div class="panel-header panel-header-tight">
           <div>
             <p class="section-kicker">Quick start</p>
@@ -183,7 +193,7 @@
         </div>
       </section>
 
-      <section id="calculatorSection" class="panel debt-panel" aria-labelledby="calculatorHeading">
+      <section id="calculatorSection" class="panel debt-panel v2c-surface" aria-labelledby="calculatorHeading">
         <div class="panel-header">
           <div>
             <p class="section-kicker">Calculator</p>
@@ -193,7 +203,7 @@
         </div>
 
         <div class="calculator-layout">
-          <form id="debtForm" class="calculator-card no-print" novalidate>
+          <form id="debtForm" class="calculator-card no-print v2c-card" novalidate>
             <div class="form-toolbar form-toolbar-compact">
               <div>
                 <strong>Inputs stay saved on this device.</strong>
@@ -205,7 +215,7 @@
               </div>
             </div>
 
-            <section class="input-card">
+            <section class="input-card v2c-card">
               <div class="input-card-head">
                 <div>
                   <span class="step-kicker">Debts</span>
@@ -214,7 +224,7 @@
                 <p>Add each debt you want included in your payoff plan.</p>
               </div>
 
-              <div class="debt-table-wrap">
+              <div class="debt-table-wrap v2c-table">
                 <div id="debtRows" class="debt-rows"></div>
               </div>
 
@@ -224,7 +234,7 @@
               </div>
             </section>
 
-            <section class="input-card">
+            <section class="input-card v2c-card">
               <div class="input-card-head">
                 <div>
                   <span class="step-kicker">Core settings</span>
@@ -290,9 +300,9 @@
           </form>
 
           <div class="results-stack">
-            <section id="headlineSummary" class="results-shell headline-shell headline-band" aria-live="polite"></section>
+            <section id="headlineSummary" class="results-shell headline-shell headline-band v2c-card" aria-live="polite"></section>
 
-            <section id="resultsSummary" class="results-shell" aria-labelledby="resultsHeading">
+            <section id="resultsSummary" class="results-shell v2c-card" aria-labelledby="resultsHeading">
               <div class="results-block-head">
                 <div>
                   <p class="section-kicker">Results</p>
@@ -308,7 +318,7 @@
               <div id="resultCards" class="result-grid" aria-live="polite"></div>
             </section>
 
-            <details class="results-shell results-detail-shell">
+            <details class="results-shell results-detail-shell v2c-card">
               <summary class="results-detail-summary">
                 <span class="section-kicker">Comparison</span>
                 <strong>Snowball vs avalanche</strong>
@@ -320,7 +330,7 @@
               </div>
             </details>
 
-            <details class="results-shell results-detail-shell">
+            <details class="results-shell results-detail-shell v2c-card">
               <summary class="results-detail-summary">
                 <span class="section-kicker">Payoff order</span>
                 <strong>Which debts get cleared first</strong>
@@ -334,7 +344,7 @@
         </div>
       </section>
 
-      <section id="chartSection" class="panel" aria-labelledby="chartHeading">
+      <section id="chartSection" class="panel v2c-surface" aria-labelledby="chartHeading">
         <div class="panel-header">
           <div>
             <p class="section-kicker">Timeline</p>
@@ -342,7 +352,7 @@
           </div>
           <p>The chart tracks your total remaining balance month by month so you can see how quickly the plan gains momentum.</p>
         </div>
-        <div class="chart-card">
+        <div class="chart-card v2c-chart">
           <div class="chart-story">
             <strong>How much difference does an extra payment make?</strong>
             <p>Run your current plan first, then add a small extra monthly payment. Even modest extras can shorten the payoff timeline and reduce interest more than most people expect.</p>
@@ -357,7 +367,7 @@
         </div>
       </section>
 
-      <section id="scheduleSection" class="panel" aria-labelledby="scheduleHeading">
+      <section id="scheduleSection" class="panel v2c-surface" aria-labelledby="scheduleHeading">
         <div class="panel-header">
           <div>
             <p class="section-kicker">Schedule</p>
@@ -368,7 +378,7 @@
 
         <details class="schedule-panel">
           <summary>Open the detailed monthly schedule</summary>
-          <div class="schedule-table-wrap">
+          <div class="schedule-table-wrap v2c-table">
             <table class="schedule-table">
               <thead>
                 <tr>
@@ -386,7 +396,7 @@
         </details>
       </section>
 
-      <section id="learnSection" class="panel seo-panel" aria-labelledby="learnHeading">
+      <section id="learnSection" class="panel seo-panel v2c-surface" aria-labelledby="learnHeading">
         <div class="panel-header">
           <div>
             <p class="section-kicker">Learn</p>
@@ -438,7 +448,7 @@
         </div>
       </section>
 
-      <section class="panel" aria-labelledby="canadaContextHeading-debt-payoff">
+      <section class="panel v2c-surface" aria-labelledby="canadaContextHeading-debt-payoff">
         <div class="panel-header">
           <div>
             <p class="section-kicker">Canadian context</p>
@@ -466,7 +476,7 @@
       </section>
 
 
-      <section class="panel faq-panel" aria-labelledby="faqHeading">
+      <section class="panel faq-panel v2c-surface" aria-labelledby="faqHeading">
         <div class="panel-header">
           <div>
             <p class="section-kicker">FAQ</p>
@@ -498,7 +508,7 @@
         </div>
       </section>
 
-      <section class="panel related-panel no-print" aria-labelledby="relatedHeading">
+      <section class="panel related-panel no-print v2c-surface" aria-labelledby="relatedHeading">
         <div class="panel-header">
           <div>
             <p class="section-kicker">Related tools</p>
@@ -536,11 +546,14 @@
       </section>
 
       <div data-simplekit-support></div>
-      <div data-simplekit-footer></div>
+      
     </main>
   </div>
 
   <script type="module" src="https://core.simplekit.app/core.js"></script>
   <script src="./assets/js/app.js" defer></script>
+
+<footer class="v2s-footer"><div class="v2s-wrap v2s-footer-inner"><div class="v2s-stack"><strong>SimpleKit</strong><p class="v2s-help">Free planning tools with clearer next steps.</p></div><div class="v2s-stack"><nav aria-label="Footer navigation"><a href="/tools/">Tools</a><a href="/learn/">Learn</a><a href="/methodology/">Methodology &amp; sources</a><a href="/privacy/">Privacy</a><a href="/support/">Support</a></nav><p class="v2s-help">Estimates for planning, not financial advice. Financial inputs stay in your browser; existing site analytics are described in our privacy policy.</p></div></div></footer>
+<script defer src="https://core.simplekit.app/v2/calculators.js"></script>
 </body>
 </html>

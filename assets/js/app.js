@@ -1215,7 +1215,7 @@ function drawTimelineChart(points) {
   }
 
   const rect = canvas.getBoundingClientRect();
-  const width = Math.max(320, Math.floor(rect.width || canvas.width));
+  const width = canvas.closest('[data-v2-calculator]') ? Math.max(1, Math.floor(rect.width || canvas.width)) : Math.max(320, Math.floor(rect.width || canvas.width));
   const height = Math.max(260, Math.floor(rect.height || canvas.height));
   const ratio = Math.max(1, window.devicePixelRatio || 1);
   canvas.width = width * ratio;
@@ -1242,7 +1242,7 @@ function drawTimelineChart(points) {
   }
 
   context.fillStyle = "#5e7087";
-  context.font = '12px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+  context.font = canvas.closest('[data-v2-calculator]') ? '12px ' + getComputedStyle(canvas).fontFamily : '12px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
 
   if (!points || points.length < 2) {
     context.fillText("Add valid debts to see the payoff timeline.", padding.left, padding.top + 18);
